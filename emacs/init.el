@@ -10,6 +10,11 @@
   (package-refresh-contents)
   (package-install 'multiple-cursors))
 
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
 (require 'multiple-cursors)
 ;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
@@ -93,7 +98,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(company dap-mode ement gruber-darker-theme lsp-mode magit multiple-cursors
-	     svelte-mode)))
+	     smex svelte-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
