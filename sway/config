@@ -32,7 +32,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/custom/wallpaper-dark.png fill
+output * bg ~/.config/custom/sunset.png fill
 #
 # Example configuration:
 #
@@ -96,7 +96,7 @@ workspace 10 output HDMI-A-1
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+c kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -238,6 +238,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec flameshot gui
+    bindsym $mod+e exec nemo
+    bindsym $mod+g exec pavucontrol
 
 #
 # Status Bar:
