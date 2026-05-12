@@ -1,3 +1,6 @@
+[terminal.shell]
+program = "/bin/zsh"
+
 [font]
 size = 20.0
 
@@ -18,3 +21,8 @@ style = "Italic"
 
 [window]
 #opacity = 0.8
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
