@@ -5,14 +5,15 @@ function install_font {
     fc-cache
 }
 
+mkdir -p "${HOME}/.config"
+
 for i in $(find . -maxdepth 1 -type d); do
 
     if [[ "$i" == "./.git" ]]; then
 	continue
     fi
     
-    mkdir -p "${HOME}/.config/${i}"
-    ln -s "$(pwd)/${i}" "${HOME}/.config/${i}"
+    ln -sfn "$(pwd)/${i}" "${HOME}/.config/"
 done
 
 ln -s "$(pwd)/.tmux.conf" "${HOME}/.tmux.conf"
