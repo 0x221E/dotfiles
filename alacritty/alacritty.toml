@@ -5,22 +5,19 @@ program = "/bin/zsh"
 size = 20.0
 
 [font.offset]
-y=0 # ZEN_OFFSET
+x=2
 
 [font.normal]
-family = "JetBrains Mono"
+family = "iosevka"
 style = "Regular"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "iosevka"
 style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "iosevka"
 style = "Italic"
-
-[window]
-#opacity = 0.8
 
 [[keyboard.bindings]]
 key = "Return"
