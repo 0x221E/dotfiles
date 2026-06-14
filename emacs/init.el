@@ -22,6 +22,15 @@
 (global-set-key (kbd "S-<f2>") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-<f2>") 'mc/mark-all-like-this)
 
+; Source - https://stackoverflow.com/a/5533251
+; Posted by user173973, modified by community. See post 'Timeline' for change history
+; Retrieved 2026-05-13, License - CC BY-SA 3.0
+
+(global-set-key (kbd "C-ş") 'text-scale-increase)
+(global-set-key (kbd "C-.") 'text-scale-decrease)
+
+(global-set-key (kbd "M-s") 'shell-command)
+
 (global-display-line-numbers-mode)
 (setq backup-directory-alist `(("." . "~/emacs/autosaves/")))
 (setq auto-save-file-name-transforms '((".*" "~/emacs/autosaves/\\1" t)))
