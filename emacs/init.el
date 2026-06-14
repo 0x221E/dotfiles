@@ -15,6 +15,8 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
+(ido-mode 1)
+
 (require 'multiple-cursors)
 ;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
