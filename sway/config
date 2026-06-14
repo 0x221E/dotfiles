@@ -15,6 +15,9 @@ exec systemctl --user start xdg-desktop-portal-wlr
 #
 # Read `man 5 sway` for a complete reference.
 
+font pango:monospace 8
+#font pango:Comic Code 10
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -246,7 +249,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
     #swaybar_command waybar
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -261,5 +264,3 @@ bar {
 }
 
 include /etc/sway/config.d/*
-
-exec opensnitch-ui
