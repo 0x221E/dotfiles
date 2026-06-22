@@ -10,12 +10,18 @@
   (package-refresh-contents)
   (package-install 'multiple-cursors))
 
+(set-face-attribute 'default nil :family "Iosevka")
+(set-face-attribute 'variable-pitch nil :family "Iosevka Aile")
+;;(set-face-attribute 'org-modern-symbol nil :family "Iosevka")
+
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-(ido-mode 1)
+;; (ido-mode 1)
+
+(add-hook 'org-mode-hook #'org-modern-mode)
 
 (require 'multiple-cursors)
 ;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -101,15 +107,20 @@
           (lambda ()
             (local-set-key (kbd "C-c \\") 'my-c-backslash-region-80)))
 
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auth-source-save-behavior nil)
+ '(org-agenda-files
+   '("~/schedule.org" "/home/cool/daily/2026-06-15/luggage.org"
+     "/home/cool/daily/2026-06-15/todo.org"
+     "/home/cool/daily/2026-06-16/todo.org"
+     "/home/cool/daily/2026-06-17/todo.org"
+     "/home/cool/daily/2026-06-18/todo.org"))
  '(package-selected-packages
-   '(company dap-mode ement gruber-darker-theme lsp-mode magit multiple-cursors
-	     smex svelte-mode)))
+   '(company gruber-darker-theme magit multiple-cursors org-modern org-roam smex)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -117,4 +128,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 
+(setq org-agenda-files
+      (directory-files-recursively "~/monthly/" "\\.org$"))
